@@ -35,6 +35,7 @@ template<typename T,typename OP1, typename OP2>
 class A_Mult
 {
 private:
+    //为了类型同一，使用A_Traits模板
     typename A_Traits<OP1>::ExprRef op1;
     typename A_Traits<OP2>::ExprRef op2;
 public:
@@ -43,6 +44,7 @@ public:
         
     }
 
+    //对数组中的每一个数进行操作
     T operator[] (size_t idx) const
     {
         return op1[idx] * op2[idx];

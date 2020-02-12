@@ -44,6 +44,7 @@ public:
         return expr_rep.size();
     }
 
+    //const 为右值，不可改变
     T operator[](size_t idx) const
     {
         assert(idx < size());
